@@ -10,12 +10,12 @@
 ;	an upper-case alphabetic character representing the same letter in the
 ;	English language. It then prints to the screen. Some examples are:
 ;
-;	 Input				Internal 					Output As
+;	 Input				Internal					Output As
 ;	 Character			Representation				Character
 ;	-------------------------------------------------------------------------
 ;	 a					61h							A
 ;	 c					63h							C
-;    z					7Ah						    Z
+;    z					7Ah							Z
 ;
 ; * Finally, if the character is a period, the character is printed to the
 ;	screen and the program terminates execution.
@@ -43,12 +43,12 @@
 ;	  termination instructions and exit without error.
 ;------------------------------------------------------------------------------
 getloop:									;
-		mov 	BX, AX						; Move transition code into bx
-		add 	BX, BX						; double for word data
-		mov 	AX, CS:[trans + BX]			; find new read/write/exit code
+		mov		BX, AX						; Move transition code into bx
+		add		BX, BX						; double for word data
+		mov		AX, CS:[trans + BX]			; find new read/write/exit code
 		mov		DL, AL						; prepare to write a char (DH=char)
-		int 	21h							; DOS interrupt issued.
-		jmp 	getloop						; jump to the top of the loop.
+		int		21h							; DOS interrupt issued.
+		jmp		getloop						; jump to the top of the loop.
 ;------------------------------------------------------------------------------
 ; Translation Table
 ;------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ trans	dw 	022Eh dup (0800h)				; Read a new character, no print required (022Eh)
 		dw	0220h							; print 'space'
 		dw 	0Dh dup (0800h)					; Read a new character, no print required (period)
 		dw	022Eh							; print period
-		dw	18 dup (0800h) 					; Read a new character, no print required ('A')
+		dw	18 dup (0800h)					; Read a new character, no print required ('A')
 											; Print:
 		dw 	0241h,0242h,0243h,0244h,0245h	; A-E
 		dw	0246h,0247h,0248h,0249h,024Ah	; F-J
@@ -67,7 +67,7 @@ trans	dw 	022Eh dup (0800h)				; Read a new character, no print required (022Eh)
 		dw	0250h,0251h,0252h,0253h,0254h	; P-T
 		dw	0255h,0256h,0257h,0258h,0259h	; U-Y
 		dw	025Ah							; Z
-		dw	6 dup (0800h) 				    ; Read a new character, no print required ('a')
+		dw	6 dup (0800h)					; Read a new character, no print required ('a')
 											; Print and Change:
 		dw	0241h,0242h,0243h,0244h,0245h	; a-e to A-E
 		dw	0246h,0247h,0248h,0249h,024Ah	; f-j to F-J
@@ -75,8 +75,8 @@ trans	dw 	022Eh dup (0800h)				; Read a new character, no print required (022Eh)
 		dw	0250h,0251h,0252h,0253h,0254h	; p-t to P-T
 		dw	0255h,0256h,0257h,0258h,0259h	; u-y to U-Y
 		dw	025Ah							; z to Z
-		dw	133 dup (0800h) 				; Read a new character, no print required (remaining)
-end 	 									; end of program marker
+		dw	133 dup (0800h)					; Read a new character, no print required (remaining)
+end											; end of program marker
 ;------------------------------------------------------------------------------
 ; END OF PROGRAM KEY
 ;------------------------------------------------------------------------------
