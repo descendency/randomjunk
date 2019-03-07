@@ -4,19 +4,11 @@
 ; an upper-case alphabetic character, a lower-case alphabetic character,
 ; and a termination character key (the period key in this case). The following
 ; occurs during execution of the program:
-; * If the character is a space or upper-case alphabetic character, it is
-;	printed directly to the screen.
+; * If the pressed key is a space or upper-case alphabetic character, it is
+;	printed directly to the screen. The same for a space.
 ; * If it is a lower-case alphabetic character, the program translates it into
 ;	an upper-case alphabetic character representing the same letter in the
-;	English language. It then prints to the screen. Some examples are:
-;
-;	 Input				Internal					Output As
-;	 Character			Representation				Character
-;	-------------------------------------------------------------------------
-;	 a					61h							A
-;	 c					63h							C
-;    z					7Ah							Z
-;
+;	English language. It then prints to the screen.
 ; * Finally, if the character is a period, the character is printed to the
 ;	screen and the program terminates execution.
 ;------------------------------------------------------------------------------
