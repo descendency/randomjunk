@@ -1,3 +1,7 @@
+This repository contains a group of examples I wrote for introductory Go programming.
+
+Below is a list of items I intend(ed) to implement, but all of these items (and more) are available across Github/Google/Reddit/the Internet.
+
 1. Preparation of the Environment
 2. Hello, World!
     - Basic Program Structure
