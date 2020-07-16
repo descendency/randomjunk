@@ -2,6 +2,8 @@ This repository contains a group of examples I wrote for introductory Go program
 
 Below is a list of items I intend(ed) to implement, but all of these items (and more) are available across Github/Google/Reddit/the Internet.
 
+"Programming... there is no better way to turn a 5 minute task into hundreds of hours of work."
+
 1. Preparation of the Environment
 2. Hello, World!
     - Basic Program Structure
@@ -10,6 +12,7 @@ Below is a list of items I intend(ed) to implement, but all of these items (and 
         - func main()
     - Printing to the screen
     - Comments
+
 2.1) Testing and Debugging
 3. Data Types
     - Values
