@@ -135,16 +135,16 @@ If you didn't make it this far and you just skipped ahead hoping for magic - ple
 
 After you are done and no longer want splunk, kibana, AND es...
 
-docker rm -f -v $(docker -q)
+\> docker rm -f -v $(docker -q)
 
 or
 
-docker rm -f -v es kibana splunk
+\> docker rm -f -v es kibana splunk
 
 If you would like to free up some disk space from the images you downloaded...
 
-docker rmi blacktop/zeek busybox splunk/splunk docker.elastic.co/logstash/logstash-oss:7.8.0 docker.elastic.co/kibana/kibana-oss:7.8.0 docker.elastic.co/elasticsearch/elasticsearch-oss:7.8.0 docker.elastic.co/beats/filebeat-oss:7.8.0
+\> docker rmi blacktop/zeek busybox splunk/splunk docker.elastic.co/logstash/logstash-oss:7.8.0 docker.elastic.co/kibana/kibana-oss:7.8.0 docker.elastic.co/elasticsearch/elasticsearch-oss:7.8.0 docker.elastic.co/beats/filebeat-oss:7.8.0
 
 or
 
-docker rmi $(docker images -q)
+\> docker rmi $(docker images -q)
