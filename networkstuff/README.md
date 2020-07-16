@@ -6,7 +6,7 @@ Honestly, for Windows... it might be easier to just download WSL2 (Linux Subsyst
 
 ## Step 1. Install Docker.
 
-For Windows/MacOS: http://www.docker.com and install "Docker Desktop" for your OS.
+For Windows/MacOS: http://www.docker.com and install "Docker Desktop" for your OS. You may need to restart after you do this. 
 
 If you use RHEL/CentOS:
 
