@@ -6,7 +6,7 @@ Honestly, for Windows... it might be easier to just download WSL2 (Linux Subsyst
 
 ## Step 1. Install Docker.
 
-For Windows/MacOS: http://www.docker.com and install "Docker Desktop" for your OS. You may need to restart after you do this. 
+For Windows/MacOS: http://www.docker.com and install "Docker Desktop" for your OS. You may need to restart after you do this.
 
 If you use RHEL/CentOS:
 
@@ -71,7 +71,7 @@ The 172.18.0.3 is the docker IP address. Do not change this unless you want a he
 
 Attach this to elasticsearch. You will need a kibana.yml that I included in the repo.
 
-\> docker run -itd --network databridge --ip 172.18.0.4 -v $(pwd)/kibana.yml:/usr/share/kibana/config/kibana.yml --link es:elasticsearch --name kibana -p 5601:5601 docker.elastic.co/kibana/kibana-oss:7.8.0
+\> docker run -itd --restart=always --network databridge --ip 172.18.0.4 -v $(pwd)/kibana.yml:/usr/share/kibana/config/kibana.yml --link es:elasticsearch --name kibana -p 5601:5601 docker.elastic.co/kibana/kibana-oss:7.8.0
 
 ## Step 6. Run Logstash.
 
