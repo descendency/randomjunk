@@ -60,6 +60,10 @@ If done correctly, the local directory is where your zeek logs will be dumped.
 
 This might feel weird to start in the middle of the ELK pipeline, but you have to.
 
+\> sysctl -w net.ipv4.conf.all.forwarding=1
+
+\> echo "net.ipv4.conf.all.forwarding=1" \>\> /usr/lib/sysctl.d/00-system.conf
+
 \> docker network create --driver=bridge --subnet=172.18.0.0/24 --gateway=172.18.0.1 --ipv6 --subnet=2001:3200:3200::/64 --gateway=2001:3200:3200::1 databridge
 
 \> docker run --network databridge --ip 172.18.0.3 -itd --name es --restart=always -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch-oss:7.8.0
