@@ -12,8 +12,7 @@ Below is a list of items I intend(ed) to implement, but all of these items (and 
         - func main()
     - Printing to the screen
     - Comments
-
-2.1) Testing and Debugging
+    - Testing and Debugging
 3. Data Types
     - Values
     - String Concatenation
@@ -38,8 +37,7 @@ Below is a list of items I intend(ed) to implement, but all of these items (and 
     - Indefinite Loop
     - break
     - continue
-7.5) Advanced topics
-    - Nesting
+    - Advanced topics - Nesting
 8. Slices/Arrays
     - declaration
     - Difference between a slice and an array
